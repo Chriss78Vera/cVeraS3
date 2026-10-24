@@ -2,11 +2,36 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="cVeraS3.Views.vReporte"
-             Title="vReporte">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Resumen">
+    <ScrollView>
+        <VerticalStackLayout Padding="24,36" Spacing="18">
+            <Label Text="Resumen académico" Style="{StaticResource TituloPagina}" />
+            <Label Text="Consulta el estado de tu actividad" Style="{StaticResource TextoSecundario}" />
+            <Border BackgroundColor="{StaticResource Primary}" Padding="22" Margin="0,16,0,0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="22" />
+                </Border.StrokeShape>
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="¡Bienvenido!" TextColor="White" FontSize="24" FontAttributes="Bold" />
+                    <Label Text="Tu sesión se inició correctamente." TextColor="#EDE9FE" FontSize="15" />
+                </VerticalStackLayout>
+            </Border>
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                <Border Grid.Column="0" BackgroundColor="White" Stroke="#E5E7EB" Padding="16">
+                    <Border.StrokeShape><RoundRectangle CornerRadius="18" /></Border.StrokeShape>
+                    <VerticalStackLayout Spacing="6">
+                        <Label Text="Estado" Style="{StaticResource EtiquetaFormulario}" />
+                        <Label Text="Activo" TextColor="#15803D" FontSize="20" FontAttributes="Bold" />
+                    </VerticalStackLayout>
+                </Border>
+                <Border Grid.Column="1" BackgroundColor="White" Stroke="#E5E7EB" Padding="16">
+                    <Border.StrokeShape><RoundRectangle CornerRadius="18" /></Border.StrokeShape>
+                    <VerticalStackLayout Spacing="6">
+                        <Label Text="Avance" Style="{StaticResource EtiquetaFormulario}" />
+                        <Label Text="En curso" TextColor="{StaticResource Primary}" FontSize="20" FontAttributes="Bold" />
+                    </VerticalStackLayout>
+                </Border>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

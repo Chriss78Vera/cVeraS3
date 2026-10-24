@@ -14,30 +14,30 @@ public partial class vLogin : ContentPage
         usuario = usuarioNuevo;
         clave = claveNueva;
     }
-    private void btnIniciarSesion_Clicked(object sender, EventArgs e)
+    private async void btnIniciarSesion_Clicked(object? sender, EventArgs e)
     {
         try
         {
-            string usuarioIngreso = txtUsuario.Text;
-            string claveIngreso = txtClave.Text;
+            string usuarioIngreso = txtUsuario.Text ?? string.Empty;
+            string claveIngreso = txtClave.Text ?? string.Empty;
             if (usuarioIngreso == usuario && claveIngreso == clave)
             {
-                Navigation.PushAsync(new vReporte(usuario));
+                await Navigation.PushAsync(new vReporte(usuario));
             }
             else
             {
-                DisplayAlertAsync("Alerta", "Usuario/Clave Incorrectos", "ok");
+                await DisplayAlertAsync("Datos incorrectos", "El usuario o la contraseña no son válidos.", "Aceptar");
             }
         }
         catch (Exception ex)
         {
-            DisplayAlertAsync("Error", ex.Message, "Cerrar");
+            await DisplayAlertAsync("Error", ex.Message, "Cerrar");
 
         }
     }
 
-    private void btnRegistrar_Clicked(object sender, EventArgs e)
+    private async void btnRegistrar_Clicked(object? sender, EventArgs e)
     {
-        Navigation.PushAsync(new vRegistro());
+        await Navigation.PushAsync(new vRegistro());
     }
 }

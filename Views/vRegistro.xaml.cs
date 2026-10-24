@@ -7,18 +7,18 @@ public partial class vRegistro : ContentPage
         InitializeComponent();
     }
 
-    private void btnGuardar_Clicked(object sender, EventArgs e)
+    private async void btnGuardar_Clicked(object? sender, EventArgs e)
     {
         try
         {
-            string usuarioNuevo = txtUsuarioNuevo.Text;
-            string claveUsuario = txtClave.Text;
-            Navigation.PushAsync(new vLogin(usuarioNuevo, claveUsuario));
-            DisplayAlertAsync("Alerta", "Usuario Guardado", "OK");
+            string usuarioNuevo = txtUsuarioNuevo.Text ?? string.Empty;
+            string claveUsuario = txtClave.Text ?? string.Empty;
+            await Navigation.PushAsync(new vLogin(usuarioNuevo, claveUsuario));
+            await DisplayAlertAsync("Registro exitoso", "El usuario se guardó correctamente.", "Aceptar");
         }
         catch (Exception ex)
         {
-            DisplayAlertAsync("Error", ex.Message, "Cerrar");
+            await DisplayAlertAsync("Error", ex.Message, "Cerrar");
 
         }
     }

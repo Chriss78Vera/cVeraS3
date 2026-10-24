@@ -14,9 +14,9 @@ namespace cVeraS3
             count++;
 
             if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
+                CounterBtn.Text = $"Visita registrada: {count}";
             else
-                CounterBtn.Text = $"Clicked {count} times";
+                CounterBtn.Text = $"Visitas registradas: {count}";
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }

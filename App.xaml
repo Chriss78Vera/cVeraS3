@@ -4,17 +4,46 @@
              xmlns:local="clr-namespace:cVeraS3"
              x:Class="cVeraS3.App">
     <Application.Resources>
-
-        <Style x:Key="GlobalBotones" TargetType="Button">
-            <Setter Property="BackgroundColor" Value="Brown"/>
-            <Setter Property="TextColor" Value="White"/>
-
-        </Style>
-        <!--<ResourceDictionary>
+        <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>-->
+
+            <Style x:Key="GlobalBotones" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="CornerRadius" Value="14" />
+                <Setter Property="Padding" Value="18,12" />
+            </Style>
+
+            <Style x:Key="BotonSecundario" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Secondary}" />
+                <Setter Property="TextColor" Value="{StaticResource Tertiary}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="CornerRadius" Value="14" />
+                <Setter Property="Padding" Value="18,12" />
+            </Style>
+
+            <Style x:Key="TituloPagina" TargetType="Label">
+                <Setter Property="FontSize" Value="28" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{StaticResource MidnightBlue}" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+
+            <Style x:Key="TextoSecundario" TargetType="Label">
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="TextColor" Value="{StaticResource Gray600}" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+
+            <Style x:Key="EtiquetaFormulario" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{StaticResource Gray600}" />
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
