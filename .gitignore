@@ -1,0 +1,21 @@
+# Build
+[Bb]in/
+[Oo]bj/
+*.apk
+*.aab
+*.ipa
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / VS Code
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

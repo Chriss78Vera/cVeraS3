@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cVeraS3.Views.vRegistro"
+             Title="vRegistro">
+
+    <VerticalStackLayout>
+        <Label 
+            Text="Registro de Usuario"
+            FontSize="20"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry
+     x:Name="txtUsuarioNuevo"
+     Placeholder="Ingresa el Usuario"
+     ></Entry>
+        <Entry
+     x:Name="txtClave"
+     Placeholder="Clave Nueva"
+     ></Entry>
+        <Button
+     x:Name="btnGuardar"
+     Style="{StaticResource GlobalBotones}"
+     Text="Guardar Usuario"
+     Clicked="btnGuardar_Clicked"
+     ></Button>
+
+    </VerticalStackLayout>
+</ContentPage>
