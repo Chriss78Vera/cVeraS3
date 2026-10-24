@@ -15,7 +15,7 @@
                 <VerticalStackLayout Spacing="8">
                     <Label Text="Usuario" Style="{StaticResource EtiquetaFormulario}" />
                     <Entry x:Name="txtUsuarioNuevo" Style="{StaticResource CampoFormulario}" Placeholder="Elige un usuario" />
-                    <Label Text="Contraseña" Style="{StaticResource EtiquetaFormulario}" Margin="0,10,0,0" />
+                    <Label Text="Contraseña *" Style="{StaticResource EtiquetaFormulario}" Margin="0,10,0,0" />
                     <Entry x:Name="txtClave" Style="{StaticResource CampoFormulario}" Placeholder="Crea una contraseña" IsPassword="True" />
                     <Button x:Name="btnGuardar" Style="{StaticResource GlobalBotones}" Text="Guardar usuario" Clicked="btnGuardar_Clicked" Margin="0,14,0,0" />
                 </VerticalStackLayout>

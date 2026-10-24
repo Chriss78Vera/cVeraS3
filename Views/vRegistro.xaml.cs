@@ -13,6 +13,14 @@ public partial class vRegistro : ContentPage
         {
             string usuarioNuevo = txtUsuarioNuevo.Text ?? string.Empty;
             string claveUsuario = txtClave.Text ?? string.Empty;
+
+            if (string.IsNullOrWhiteSpace(claveUsuario))
+            {
+                await DisplayAlertAsync("Contraseña obligatoria", "Ingresa una contraseña para continuar.", "Aceptar");
+                txtClave.Focus();
+                return;
+            }
+
             await Navigation.PushAsync(new vLogin(usuarioNuevo, claveUsuario));
             await DisplayAlertAsync("Registro exitoso", "El usuario se guardó correctamente.", "Aceptar");
         }
